@@ -1,0 +1,11 @@
+<map id="include/AuxiliarCli.h" name="include/AuxiliarCli.h">
+<area shape="rect" id="Node000001" title="Utilidades para interacción en consola y mensajes coloreados." alt="" coords="299,5,451,31"/>
+<area shape="rect" id="Node000002" href="$ArduinoParser_8cpp_source.html" title=" " alt="" coords="5,79,167,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,37,133,81,132,76,315,31"/>
+<area shape="rect" id="Node000003" href="$LineaDispatcher_8cpp_source.html" title=" " alt="" coords="191,79,367,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,41,297,81,293,76,347,37"/>
+<area shape="rect" id="Node000004" href="$ListaDeCarga_8cpp_source.html" title=" " alt="" coords="392,79,551,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="403,37,457,76,454,81,400,41"/>
+<area shape="rect" id="Node000005" href="$main_8cpp_source.html" title=" " alt="" coords="575,79,680,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="430,32,587,76,586,81,428,37"/>
+</map>

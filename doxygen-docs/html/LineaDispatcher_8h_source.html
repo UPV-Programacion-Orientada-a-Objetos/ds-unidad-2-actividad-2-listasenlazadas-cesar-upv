@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7): Archivo de código fuente include/LineaDispatcher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)
+   </div>
+   <div id="projectbrief">Unidad 2 | Actividad 2 | Estructuras de Datos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('LineaDispatcher_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LineaDispatcher.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="LineaDispatcher_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">class </span><a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="classListaDeCarga.html">ListaDeCarga</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="classRotorDeMapeo.html">RotorDeMapeo</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classLineaDispatcher.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classLineaDispatcher.html">LineaDispatcher</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classLineaDispatcher.html">LineaDispatcher</a>(<a class="code hl_class" href="classListaDeCarga.html">ListaDeCarga</a>* carga = <span class="keyword">nullptr</span>, <a class="code hl_class" href="classRotorDeMapeo.html">RotorDeMapeo</a>* rotor = <span class="keyword">nullptr</span>, <a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>* logger = <span class="keyword">nullptr</span>) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classLineaDispatcher.html#a93b4a7ec0554522e5e0a1d828ae4d899">setLogger</a>(<a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>* logger) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classLineaDispatcher.html#a1f4c8427a80853c8c41c248744ec66de">setComponentes</a>(<a class="code hl_class" href="classListaDeCarga.html">ListaDeCarga</a>* carga, <a class="code hl_class" href="classRotorDeMapeo.html">RotorDeMapeo</a>* rotor) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classLineaDispatcher.html#a1ea36e90320efea381309a797fa5b2ec">iniciarSesion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* motivo = <span class="stringliteral">&quot;INICIO&quot;</span>, <span class="keywordtype">bool</span> limpiar = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classLineaDispatcher.html#a3d80303ef5ec9c8373196f2b4708e661">terminarSesion</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classLineaDispatcher.html#a9128c53cf34bc6bfad8c6864d50cce6b">sesionActiva</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9">onRawLine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* linea);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::size_t <a class="code hl_function" href="classLineaDispatcher.html#a9cb7b9ac949a03b8122fd56352e6090d">totalProcesado</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_class" href="classListaDeCarga.html">ListaDeCarga</a>* _carga;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="classRotorDeMapeo.html">RotorDeMapeo</a>* _rotor;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>* _logger;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::size_t _procesadas;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> _sesionActiva;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">bool</span> procesarCarga(<span class="keywordtype">char</span>* payload);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">bool</span> procesarMapa(<span class="keywordtype">char</span>* payload);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">static</span> <span class="keywordtype">char</span> interpretarTokenCarga(<span class="keyword">const</span> <span class="keywordtype">char</span>* payload, <span class="keywordtype">bool</span>&amp; valido);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <span class="keywordtype">char</span>* tipo, <span class="keyword">const</span> <span class="keywordtype">char</span>* mensaje) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> describirCaracter(<span class="keywordtype">char</span> caracter, <span class="keywordtype">char</span>* destino, std::size_t tam);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> registrarSaltoLinea() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="ttc" id="aclassAuxiliarCli_html"><div class="ttname"><a href="classAuxiliarCli.html">AuxiliarCli</a></div><div class="ttdoc">Auxilia a la interfaz de consola con logs y lectura validada.</div><div class="ttdef"><b>Definition</b> <a href="AuxiliarCli_8h_source.html#l00015">AuxiliarCli.h:16</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html"><div class="ttname"><a href="classLineaDispatcher.html">LineaDispatcher</a></div><div class="ttdoc">Gestiona las tramas crudas recibidas y coordina la decodificación.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8h_source.html#l00017">LineaDispatcher.h:17</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a1ea36e90320efea381309a797fa5b2ec"><div class="ttname"><a href="classLineaDispatcher.html#a1ea36e90320efea381309a797fa5b2ec">LineaDispatcher::iniciarSesion</a></div><div class="ttdeci">void iniciarSesion(const char *motivo=&quot;INICIO&quot;, bool limpiar=true)</div><div class="ttdoc">Inicia una nueva sesión de decodificación.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00036">LineaDispatcher.cpp:36</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a1f4c8427a80853c8c41c248744ec66de"><div class="ttname"><a href="classLineaDispatcher.html#a1f4c8427a80853c8c41c248744ec66de">LineaDispatcher::setComponentes</a></div><div class="ttdeci">void setComponentes(ListaDeCarga *carga, RotorDeMapeo *rotor) noexcept</div><div class="ttdoc">Configura la lista y el rotor que serán manipulados.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00028">LineaDispatcher.cpp:28</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a3d80303ef5ec9c8373196f2b4708e661"><div class="ttname"><a href="classLineaDispatcher.html#a3d80303ef5ec9c8373196f2b4708e661">LineaDispatcher::terminarSesion</a></div><div class="ttdeci">void terminarSesion() noexcept</div><div class="ttdoc">Termina la sesión actual; se ignoran tramas hasta reactivarla.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00057">LineaDispatcher.cpp:57</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a5783dde94762d452d836b2ae2acc9fc9"><div class="ttname"><a href="classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9">LineaDispatcher::onRawLine</a></div><div class="ttdeci">void onRawLine(const char *linea)</div><div class="ttdoc">Procesa una línea cruda del puerto serie.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00073">LineaDispatcher.cpp:73</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a9128c53cf34bc6bfad8c6864d50cce6b"><div class="ttname"><a href="classLineaDispatcher.html#a9128c53cf34bc6bfad8c6864d50cce6b">LineaDispatcher::sesionActiva</a></div><div class="ttdeci">bool sesionActiva() const noexcept</div><div class="ttdoc">Indica si hay una sesión activa.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00063">LineaDispatcher.cpp:63</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a93b4a7ec0554522e5e0a1d828ae4d899"><div class="ttname"><a href="classLineaDispatcher.html#a93b4a7ec0554522e5e0a1d828ae4d899">LineaDispatcher::setLogger</a></div><div class="ttdeci">void setLogger(AuxiliarCli *logger) noexcept</div><div class="ttdoc">Define el logger a utilizar.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00023">LineaDispatcher.cpp:23</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html_a9cb7b9ac949a03b8122fd56352e6090d"><div class="ttname"><a href="classLineaDispatcher.html#a9cb7b9ac949a03b8122fd56352e6090d">LineaDispatcher::totalProcesado</a></div><div class="ttdeci">std::size_t totalProcesado() const noexcept</div><div class="ttdoc">Obtiene el número de líneas procesadas exitosamente.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00068">LineaDispatcher.cpp:68</a></div></div>
+<div class="ttc" id="aclassListaDeCarga_html"><div class="ttname"><a href="classListaDeCarga.html">ListaDeCarga</a></div><div class="ttdoc">Lista doblemente enlazada que guarda los fragmentos decodificados.</div><div class="ttdef"><b>Definition</b> <a href="ListaDeCarga_8h_source.html#l00015">ListaDeCarga.h:15</a></div></div>
+<div class="ttc" id="aclassRotorDeMapeo_html"><div class="ttname"><a href="classRotorDeMapeo.html">RotorDeMapeo</a></div><div class="ttdoc">Rotor circular doblemente enlazado que implementa el mapeo dinámico.</div><div class="ttdef"><b>Definition</b> <a href="RotorDeMapeo_8h_source.html#l00014">RotorDeMapeo.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="LineaDispatcher_8h.html">LineaDispatcher.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

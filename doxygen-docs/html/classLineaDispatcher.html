@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7): Referencia de la clase LineaDispatcher</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)
+   </div>
+   <div id="projectbrief">Unidad 2 | Actividad 2 | Estructuras de Datos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classLineaDispatcher.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="classLineaDispatcher-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase LineaDispatcher</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gestiona las tramas crudas recibidas y coordina la decodificación.  
+ <a href="classLineaDispatcher.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="LineaDispatcher_8h_source.html">LineaDispatcher.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ad5cac22ab4b99c87a9abd9cecfe264a5" id="r_ad5cac22ab4b99c87a9abd9cecfe264a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#ad5cac22ab4b99c87a9abd9cecfe264a5">LineaDispatcher</a> (<a class="el" href="classListaDeCarga.html">ListaDeCarga</a> *carga=nullptr, <a class="el" href="classRotorDeMapeo.html">RotorDeMapeo</a> *rotor=nullptr, <a class="el" href="classAuxiliarCli.html">AuxiliarCli</a> *logger=nullptr) noexcept</td></tr>
+<tr class="memdesc:ad5cac22ab4b99c87a9abd9cecfe264a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye el dispatcher con sus colaboradores opcionales.  <br /></td></tr>
+<tr class="separator:ad5cac22ab4b99c87a9abd9cecfe264a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b4a7ec0554522e5e0a1d828ae4d899" id="r_a93b4a7ec0554522e5e0a1d828ae4d899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a93b4a7ec0554522e5e0a1d828ae4d899">setLogger</a> (<a class="el" href="classAuxiliarCli.html">AuxiliarCli</a> *logger) noexcept</td></tr>
+<tr class="memdesc:a93b4a7ec0554522e5e0a1d828ae4d899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define el logger a utilizar.  <br /></td></tr>
+<tr class="separator:a93b4a7ec0554522e5e0a1d828ae4d899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4c8427a80853c8c41c248744ec66de" id="r_a1f4c8427a80853c8c41c248744ec66de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a1f4c8427a80853c8c41c248744ec66de">setComponentes</a> (<a class="el" href="classListaDeCarga.html">ListaDeCarga</a> *carga, <a class="el" href="classRotorDeMapeo.html">RotorDeMapeo</a> *rotor) noexcept</td></tr>
+<tr class="memdesc:a1f4c8427a80853c8c41c248744ec66de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura la lista y el rotor que serán manipulados.  <br /></td></tr>
+<tr class="separator:a1f4c8427a80853c8c41c248744ec66de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea36e90320efea381309a797fa5b2ec" id="r_a1ea36e90320efea381309a797fa5b2ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a1ea36e90320efea381309a797fa5b2ec">iniciarSesion</a> (const char *motivo=&quot;INICIO&quot;, bool limpiar=true)</td></tr>
+<tr class="memdesc:a1ea36e90320efea381309a797fa5b2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia una nueva sesión de decodificación.  <br /></td></tr>
+<tr class="separator:a1ea36e90320efea381309a797fa5b2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d80303ef5ec9c8373196f2b4708e661" id="r_a3d80303ef5ec9c8373196f2b4708e661"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a3d80303ef5ec9c8373196f2b4708e661">terminarSesion</a> () noexcept</td></tr>
+<tr class="memdesc:a3d80303ef5ec9c8373196f2b4708e661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Termina la sesión actual; se ignoran tramas hasta reactivarla.  <br /></td></tr>
+<tr class="separator:a3d80303ef5ec9c8373196f2b4708e661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9128c53cf34bc6bfad8c6864d50cce6b" id="r_a9128c53cf34bc6bfad8c6864d50cce6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a9128c53cf34bc6bfad8c6864d50cce6b">sesionActiva</a> () const noexcept</td></tr>
+<tr class="memdesc:a9128c53cf34bc6bfad8c6864d50cce6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si hay una sesión activa.  <br /></td></tr>
+<tr class="separator:a9128c53cf34bc6bfad8c6864d50cce6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5783dde94762d452d836b2ae2acc9fc9" id="r_a5783dde94762d452d836b2ae2acc9fc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9">onRawLine</a> (const char *linea)</td></tr>
+<tr class="memdesc:a5783dde94762d452d836b2ae2acc9fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procesa una línea cruda del puerto serie.  <br /></td></tr>
+<tr class="separator:a5783dde94762d452d836b2ae2acc9fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb7b9ac949a03b8122fd56352e6090d" id="r_a9cb7b9ac949a03b8122fd56352e6090d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineaDispatcher.html#a9cb7b9ac949a03b8122fd56352e6090d">totalProcesado</a> () const noexcept</td></tr>
+<tr class="memdesc:a9cb7b9ac949a03b8122fd56352e6090d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el número de líneas procesadas exitosamente.  <br /></td></tr>
+<tr class="separator:a9cb7b9ac949a03b8122fd56352e6090d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Gestiona las tramas crudas recibidas y coordina la decodificación. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8h_source.html#l00017">17</a> del archivo <a class="el" href="LineaDispatcher_8h_source.html">LineaDispatcher.h</a>.</p>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="ad5cac22ab4b99c87a9abd9cecfe264a5" name="ad5cac22ab4b99c87a9abd9cecfe264a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cac22ab4b99c87a9abd9cecfe264a5">&#9670;&#160;</a></span>LineaDispatcher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LineaDispatcher::LineaDispatcher </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classListaDeCarga.html">ListaDeCarga</a> *&#160;</td>
+          <td class="paramname"><em>carga</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRotorDeMapeo.html">RotorDeMapeo</a> *&#160;</td>
+          <td class="paramname"><em>rotor</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAuxiliarCli.html">AuxiliarCli</a> *&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construye el dispatcher con sus colaboradores opcionales. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carga</td><td>Lista donde se ensamblan los caracteres. </td></tr>
+    <tr><td class="paramname">rotor</td><td>Rotor que traduce los caracteres. </td></tr>
+    <tr><td class="paramname">logger</td><td>Mecanismo opcional para registrar mensajes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00014">14</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    : _carga(carga)</div>
+<div class="line"><span class="lineno">   16</span>    , _rotor(rotor)</div>
+<div class="line"><span class="lineno">   17</span>    , _logger(logger)</div>
+<div class="line"><span class="lineno">   18</span>    , _procesadas(0)</div>
+<div class="line"><span class="lineno">   19</span>    , _sesionActiva(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   20</span>{</div>
+<div class="line"><span class="lineno">   21</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="a1ea36e90320efea381309a797fa5b2ec" name="a1ea36e90320efea381309a797fa5b2ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea36e90320efea381309a797fa5b2ec">&#9670;&#160;</a></span>iniciarSesion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineaDispatcher::iniciarSesion </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>motivo</em> = <code>&quot;INICIO&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>limpiar</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia una nueva sesión de decodificación. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motivo</td><td>Texto que describe el origen del reinicio. </td></tr>
+    <tr><td class="paramname">limpiar</td><td>Si es true, limpia la lista y reinicia el rotor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00036">36</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span> (limpiar) {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (_carga) {</div>
+<div class="line"><span class="lineno">   40</span>            _carga-&gt;<a class="code hl_function" href="classListaDeCarga.html#a9e397fc13497a601c81e3dbd95f982e4">limpiar</a>();</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (_rotor) {</div>
+<div class="line"><span class="lineno">   43</span>            _rotor-&gt;<a class="code hl_function" href="classRotorDeMapeo.html#a8d72db0b8937b09041414217f154ce43">reiniciar</a>();</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="line"><span class="lineno">   46</span>    _procesadas = 0;</div>
+<div class="line"><span class="lineno">   47</span>    _sesionActiva = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (_logger &amp;&amp; motivo) {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordtype">char</span> mensaje[160];</div>
+<div class="line"><span class="lineno">   51</span>        std::snprintf(mensaje, <span class="keyword">sizeof</span>(mensaje), <span class="stringliteral">&quot;Secuencia %s detectada. Reiniciando estructuras.&quot;</span>, motivo);</div>
+<div class="line"><span class="lineno">   52</span>        _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;STATUS&quot;</span>, mensaje);</div>
+<div class="line"><span class="lineno">   53</span>        registrarSaltoLinea();</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="line"><span class="lineno">   55</span>}</div>
+<div class="ttc" id="aclassAuxiliarCli_html_a12e3201cf8b5a13560b03769f99213df"><div class="ttname"><a href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">AuxiliarCli::imprimirLog</a></div><div class="ttdeci">void imprimirLog(const char *tipo, const char *msj)</div><div class="ttdoc">Imprime un mensaje con color según la etiqueta proporcionada.</div><div class="ttdef"><b>Definition</b> <a href="AuxiliarCli_8h_source.html#l00025">AuxiliarCli.h:25</a></div></div>
+<div class="ttc" id="aclassListaDeCarga_html_a9e397fc13497a601c81e3dbd95f982e4"><div class="ttname"><a href="classListaDeCarga.html#a9e397fc13497a601c81e3dbd95f982e4">ListaDeCarga::limpiar</a></div><div class="ttdeci">void limpiar() noexcept</div><div class="ttdoc">Elimina todos los nodos y deja la lista vacía.</div><div class="ttdef"><b>Definition</b> <a href="ListaDeCarga_8cpp_source.html#l00027">ListaDeCarga.cpp:27</a></div></div>
+<div class="ttc" id="aclassRotorDeMapeo_html_a8d72db0b8937b09041414217f154ce43"><div class="ttname"><a href="classRotorDeMapeo.html#a8d72db0b8937b09041414217f154ce43">RotorDeMapeo::reiniciar</a></div><div class="ttdeci">void reiniciar() noexcept</div><div class="ttdoc">Restablece la cabeza del rotor para que apunte nuevamente a 'A'.</div><div class="ttdef"><b>Definition</b> <a href="RotorDeMapeo_8cpp_source.html#l00058">RotorDeMapeo.cpp:58</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5783dde94762d452d836b2ae2acc9fc9" name="a5783dde94762d452d836b2ae2acc9fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5783dde94762d452d836b2ae2acc9fc9">&#9670;&#160;</a></span>onRawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineaDispatcher::onRawLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>linea</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procesa una línea cruda del puerto serie. </p>
+<p>Se ignoran todas las tramas hasta recibir la palabra clave "INICIO". Posteriormente, cada línea válida genera los logs correspondientes, crea la trama adecuada y la procesa.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linea</td><td>Texto recibido (sin incluir el salto de línea final). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00073">73</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (!linea || linea[0] == <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordtype">char</span> buffer[128];</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keyword">const</span> std::size_t limite = <span class="keyword">sizeof</span>(buffer) - 1;</div>
+<div class="line"><span class="lineno">   81</span>    std::size_t longitud = std::strlen(linea);</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span> (longitud &gt; limite) {</div>
+<div class="line"><span class="lineno">   83</span>        longitud = limite;</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span>    std::memcpy(buffer, linea, longitud);</div>
+<div class="line"><span class="lineno">   86</span>    buffer[longitud] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">while</span> (longitud &gt; 0 &amp;&amp; (buffer[longitud - 1] == <span class="charliteral">&#39;\r&#39;</span> || buffer[longitud - 1] == <span class="charliteral">&#39;\n&#39;</span>)) {</div>
+<div class="line"><span class="lineno">   89</span>        buffer[--longitud] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (longitud == 0) {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordtype">char</span> mayus[128];</div>
+<div class="line"><span class="lineno">   97</span>    std::size_t idx = 0;</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">for</span> (; idx &lt; longitud &amp;&amp; idx &lt; <span class="keyword">sizeof</span>(mayus) - 1; ++idx) {</div>
+<div class="line"><span class="lineno">   99</span>        mayus[idx] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(std::toupper(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(buffer[idx])));</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>    mayus[idx] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">if</span> (std::strcmp(mayus, <span class="stringliteral">&quot;INICIO&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_function" href="classLineaDispatcher.html#a1ea36e90320efea381309a797fa5b2ec">iniciarSesion</a>(<span class="stringliteral">&quot;INICIO&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (!_sesionActiva) {</div>
+<div class="line"><span class="lineno">  109</span>        log(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Se ignora la trama porque no se ha recibido INICIO.&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">char</span> mensaje[160];</div>
+<div class="line"><span class="lineno">  115</span>        std::snprintf(mensaje, <span class="keyword">sizeof</span>(mensaje), <span class="stringliteral">&quot;Trama recibida: [%s]&quot;</span>, buffer);</div>
+<div class="line"><span class="lineno">  116</span>        _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;STATUS&quot;</span>, mensaje);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordtype">char</span>* tipo = std::strtok(buffer, <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordtype">char</span>* payload = std::strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (!tipo || !payload) {</div>
+<div class="line"><span class="lineno">  123</span>        log(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Trama incompleta recibida.&quot;</span>);</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">while</span> (*payload == <span class="charliteral">&#39; &#39;</span>) {</div>
+<div class="line"><span class="lineno">  128</span>        ++payload;</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> prefijo = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(std::toupper(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(tipo[0])));</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordtype">bool</span> exito = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">if</span> (prefijo == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><span class="lineno">  134</span>        exito = procesarCarga(payload);</div>
+<div class="line"><span class="lineno">  135</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prefijo == <span class="charliteral">&#39;M&#39;</span>) {</div>
+<div class="line"><span class="lineno">  136</span>        exito = procesarMapa(payload);</div>
+<div class="line"><span class="lineno">  137</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  138</span>        log(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Prefijo de trama desconocido.&quot;</span>);</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">if</span> (exito) {</div>
+<div class="line"><span class="lineno">  142</span>        ++_procesadas;</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="line"><span class="lineno">  144</span>}</div>
+<div class="ttc" id="aclassLineaDispatcher_html_a1ea36e90320efea381309a797fa5b2ec"><div class="ttname"><a href="classLineaDispatcher.html#a1ea36e90320efea381309a797fa5b2ec">LineaDispatcher::iniciarSesion</a></div><div class="ttdeci">void iniciarSesion(const char *motivo=&quot;INICIO&quot;, bool limpiar=true)</div><div class="ttdoc">Inicia una nueva sesión de decodificación.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00036">LineaDispatcher.cpp:36</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9128c53cf34bc6bfad8c6864d50cce6b" name="a9128c53cf34bc6bfad8c6864d50cce6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9128c53cf34bc6bfad8c6864d50cce6b">&#9670;&#160;</a></span>sesionActiva()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LineaDispatcher::sesionActiva </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indica si hay una sesión activa. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true cuando se aceptan tramas. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00063">63</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>{</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> _sesionActiva;</div>
+<div class="line"><span class="lineno">   66</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1f4c8427a80853c8c41c248744ec66de" name="a1f4c8427a80853c8c41c248744ec66de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4c8427a80853c8c41c248744ec66de">&#9670;&#160;</a></span>setComponentes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineaDispatcher::setComponentes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classListaDeCarga.html">ListaDeCarga</a> *&#160;</td>
+          <td class="paramname"><em>carga</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRotorDeMapeo.html">RotorDeMapeo</a> *&#160;</td>
+          <td class="paramname"><em>rotor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configura la lista y el rotor que serán manipulados. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carga</td><td>Lista destino. </td></tr>
+    <tr><td class="paramname">rotor</td><td>Rotor responsable del mapeo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00028">28</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{</div>
+<div class="line"><span class="lineno">   30</span>    _carga = carga;</div>
+<div class="line"><span class="lineno">   31</span>    _rotor = rotor;</div>
+<div class="line"><span class="lineno">   32</span>    _sesionActiva = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   33</span>    _procesadas = 0;</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a93b4a7ec0554522e5e0a1d828ae4d899" name="a93b4a7ec0554522e5e0a1d828ae4d899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b4a7ec0554522e5e0a1d828ae4d899">&#9670;&#160;</a></span>setLogger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineaDispatcher::setLogger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAuxiliarCli.html">AuxiliarCli</a> *&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define el logger a utilizar. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logger</td><td>Nuevo logger; puede ser nulo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00023">23</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
+<div class="line"><span class="lineno">   25</span>    _logger = logger;</div>
+<div class="line"><span class="lineno">   26</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d80303ef5ec9c8373196f2b4708e661" name="a3d80303ef5ec9c8373196f2b4708e661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d80303ef5ec9c8373196f2b4708e661">&#9670;&#160;</a></span>terminarSesion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineaDispatcher::terminarSesion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Termina la sesión actual; se ignoran tramas hasta reactivarla. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00057">57</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>    _sesionActiva = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   60</span>    _procesadas = 0;</div>
+<div class="line"><span class="lineno">   61</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9cb7b9ac949a03b8122fd56352e6090d" name="a9cb7b9ac949a03b8122fd56352e6090d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb7b9ac949a03b8122fd56352e6090d">&#9670;&#160;</a></span>totalProcesado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t LineaDispatcher::totalProcesado </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene el número de líneas procesadas exitosamente. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Contador de tramas válidas. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="LineaDispatcher_8cpp_source.html#l00068">68</a> del archivo <a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> _procesadas;</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>include/<a class="el" href="LineaDispatcher_8h_source.html">LineaDispatcher.h</a></li>
+<li>src/<a class="el" href="LineaDispatcher_8cpp_source.html">LineaDispatcher.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classLineaDispatcher.html">LineaDispatcher</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

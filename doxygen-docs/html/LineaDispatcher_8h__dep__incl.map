@@ -1,0 +1,9 @@
+<map id="include/LineaDispatcher.h" name="include/LineaDispatcher.h">
+<area shape="rect" id="Node000001" title="Declara el despachador que interpreta las líneas del protocolo PRT&#45;7." alt="" coords="185,5,374,31"/>
+<area shape="rect" id="Node000002" href="$ArduinoParser_8cpp_source.html" title=" " alt="" coords="5,79,167,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,38,119,81,117,76,235,33"/>
+<area shape="rect" id="Node000003" href="$LineaDispatcher_8cpp_source.html" title=" " alt="" coords="191,79,367,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="282,44,282,79,277,79,277,44"/>
+<area shape="rect" id="Node000004" href="$main_8cpp_source.html" title=" " alt="" coords="392,79,497,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="319,34,419,76,417,81,317,38"/>
+</map>

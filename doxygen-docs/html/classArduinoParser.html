@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7): Referencia de la clase ArduinoParser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)
+   </div>
+   <div id="projectbrief">Unidad 2 | Actividad 2 | Estructuras de Datos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classArduinoParser.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-static-methods">Métodos públicos estáticos</a> &#124;
+<a href="classArduinoParser-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase ArduinoParser</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gestiona las lecturas crudas del puerto serie y las reenvía.  
+ <a href="classArduinoParser.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ArduinoParser_8h_source.html">ArduinoParser.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a2b54eabdd727cfc4ce5bacc9187d4a80" id="r_a2b54eabdd727cfc4ce5bacc9187d4a80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#a2b54eabdd727cfc4ce5bacc9187d4a80">ArduinoParser</a> (<a class="el" href="classAuxiliarCli.html">AuxiliarCli</a> *logger=nullptr, <a class="el" href="classLineaDispatcher.html">LineaDispatcher</a> *target=nullptr) noexcept</td></tr>
+<tr class="memdesc:a2b54eabdd727cfc4ce5bacc9187d4a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye el parser con apuntadores opcionales a logger y destino.  <br /></td></tr>
+<tr class="separator:a2b54eabdd727cfc4ce5bacc9187d4a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f762c7602627680f8e54af187abbeb" id="r_aa7f762c7602627680f8e54af187abbeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#aa7f762c7602627680f8e54af187abbeb">setPreset</a> (<a class="el" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> p) noexcept</td></tr>
+<tr class="memdesc:aa7f762c7602627680f8e54af187abbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define el preset que resolverá la ruta del dispositivo serie.  <br /></td></tr>
+<tr class="separator:aa7f762c7602627680f8e54af187abbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6743dcb3bfd338e9c79ec84388d83a72" id="r_a6743dcb3bfd338e9c79ec84388d83a72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#a6743dcb3bfd338e9c79ec84388d83a72">setCustomPath</a> (const char *path) noexcept</td></tr>
+<tr class="memdesc:a6743dcb3bfd338e9c79ec84388d83a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Almacena la ruta personalizada cuando el preset sea Preset::Custom.  <br /></td></tr>
+<tr class="separator:a6743dcb3bfd338e9c79ec84388d83a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68c7bf6eb43a94239921298e694e4f7" id="r_aa68c7bf6eb43a94239921298e694e4f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#aa68c7bf6eb43a94239921298e694e4f7">setBaudrate</a> (unsigned baud=115200) noexcept</td></tr>
+<tr class="memdesc:aa68c7bf6eb43a94239921298e694e4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajusta el baudrate que se intentará aplicar al abrir el puerto.  <br /></td></tr>
+<tr class="separator:aa68c7bf6eb43a94239921298e694e4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1490a0656a6caf7330bc2b35b76733" id="r_a8f1490a0656a6caf7330bc2b35b76733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#a8f1490a0656a6caf7330bc2b35b76733">setTarget</a> (<a class="el" href="classLineaDispatcher.html">LineaDispatcher</a> *target) noexcept</td></tr>
+<tr class="memdesc:a8f1490a0656a6caf7330bc2b35b76733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el objetivo que recibirá las líneas crudas.  <br /></td></tr>
+<tr class="separator:a8f1490a0656a6caf7330bc2b35b76733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50709de9e80afdf6e61caa013f86336" id="r_ab50709de9e80afdf6e61caa013f86336"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#ab50709de9e80afdf6e61caa013f86336">getPreset</a> () const noexcept</td></tr>
+<tr class="memdesc:ab50709de9e80afdf6e61caa013f86336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el preset actualmente configurado.  <br /></td></tr>
+<tr class="separator:ab50709de9e80afdf6e61caa013f86336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda1d1df0be659097a0178fe5706ce6a" id="r_aeda1d1df0be659097a0178fe5706ce6a"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#aeda1d1df0be659097a0178fe5706ce6a">getBaudrate</a> () const noexcept</td></tr>
+<tr class="memdesc:aeda1d1df0be659097a0178fe5706ce6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el baudrate que se aplicará al abrir el puerto.  <br /></td></tr>
+<tr class="separator:aeda1d1df0be659097a0178fe5706ce6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9a7fff625881bf1f618925b3f14c68" id="r_aba9a7fff625881bf1f618925b3f14c68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#aba9a7fff625881bf1f618925b3f14c68">openPort</a> ()</td></tr>
+<tr class="memdesc:aba9a7fff625881bf1f618925b3f14c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre y configura el puerto serie según el preset y la ruta personalizada.  <br /></td></tr>
+<tr class="separator:aba9a7fff625881bf1f618925b3f14c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017e55dbe703a9d90a285551da510dc3" id="r_a017e55dbe703a9d90a285551da510dc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">closePort</a> () noexcept</td></tr>
+<tr class="memdesc:a017e55dbe703a9d90a285551da510dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cierra el descriptor abierto, si existe.  <br /></td></tr>
+<tr class="separator:a017e55dbe703a9d90a285551da510dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69fa4dea0186bb2eee825e9da36426f" id="r_aa69fa4dea0186bb2eee825e9da36426f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#aa69fa4dea0186bb2eee825e9da36426f">listenUntilEnter</a> ()</td></tr>
+<tr class="memdesc:aa69fa4dea0186bb2eee825e9da36426f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia el ciclo de lectura hasta que el usuario presione ENTER en STDIN.  <br /></td></tr>
+<tr class="separator:aa69fa4dea0186bb2eee825e9da36426f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Métodos públicos estáticos</h2></td></tr>
+<tr class="memitem:a08ccee81fde470b3844850934c1dade4" id="r_a08ccee81fde470b3844850934c1dade4"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArduinoParser.html#a08ccee81fde470b3844850934c1dade4">defaultPathFor</a> (<a class="el" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> p) noexcept</td></tr>
+<tr class="memdesc:a08ccee81fde470b3844850934c1dade4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la ruta predeterminada asociada a un preset dado.  <br /></td></tr>
+<tr class="separator:a08ccee81fde470b3844850934c1dade4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Gestiona las lecturas crudas del puerto serie y las reenvía. </p>
+<p>Esta clase solo entrega cada línea completa al <a class="el" href="classLineaDispatcher.html" title="Gestiona las tramas crudas recibidas y coordina la decodificación.">LineaDispatcher</a> configurado. Cualquier detalle de configuración POSIX se realiza en la implementación. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8h_source.html#l00029">29</a> del archivo <a class="el" href="ArduinoParser_8h_source.html">ArduinoParser.h</a>.</p>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a2b54eabdd727cfc4ce5bacc9187d4a80" name="a2b54eabdd727cfc4ce5bacc9187d4a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b54eabdd727cfc4ce5bacc9187d4a80">&#9670;&#160;</a></span>ArduinoParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArduinoParser::ArduinoParser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAuxiliarCli.html">AuxiliarCli</a> *&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLineaDispatcher.html">LineaDispatcher</a> *&#160;</td>
+          <td class="paramname"><em>target</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construye el parser con apuntadores opcionales a logger y destino. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logger</td><td>Instancia para mostrar mensajes de estado o advertencia. Puede ser nulo. </td></tr>
+    <tr><td class="paramname">target</td><td>Receptor de líneas crudas. Puede ser nulo hasta que se configure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00040">40</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    : _fd(-1)</div>
+<div class="line"><span class="lineno">   42</span>    , _preset(Preset::ACM0)</div>
+<div class="line"><span class="lineno">   43</span>    , _baud(115200)</div>
+<div class="line"><span class="lineno">   44</span>    , _logger(logger)</div>
+<div class="line"><span class="lineno">   45</span>    , _target(target)</div>
+<div class="line"><span class="lineno">   46</span>{</div>
+<div class="line"><span class="lineno">   47</span>    _customPath[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="a017e55dbe703a9d90a285551da510dc3" name="a017e55dbe703a9d90a285551da510dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017e55dbe703a9d90a285551da510dc3">&#9670;&#160;</a></span>closePort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArduinoParser::closePort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cierra el descriptor abierto, si existe. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00188">188</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>{</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">if</span> (_fd &gt;= 0) {</div>
+<div class="line"><span class="lineno">  191</span>        ::close(_fd);</div>
+<div class="line"><span class="lineno">  192</span>        _fd = -1;</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  194</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;STATUS&quot;</span>, <span class="stringliteral">&quot;Puerto serie cerrado.&quot;</span>);</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+<div class="line"><span class="lineno">  197</span>}</div>
+<div class="ttc" id="aclassAuxiliarCli_html_a12e3201cf8b5a13560b03769f99213df"><div class="ttname"><a href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">AuxiliarCli::imprimirLog</a></div><div class="ttdeci">void imprimirLog(const char *tipo, const char *msj)</div><div class="ttdoc">Imprime un mensaje con color según la etiqueta proporcionada.</div><div class="ttdef"><b>Definition</b> <a href="AuxiliarCli_8h_source.html#l00025">AuxiliarCli.h:25</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a08ccee81fde470b3844850934c1dade4" name="a08ccee81fde470b3844850934c1dade4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ccee81fde470b3844850934c1dade4">&#9670;&#160;</a></span>defaultPathFor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ArduinoParser::defaultPathFor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve la ruta predeterminada asociada a un preset dado. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Preset a consultar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Cadena literal con la ruta correspondiente. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00090">90</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>{</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">switch</span> (p) {</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">case</span> Preset::ACM0:</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;/dev/ttyACM0&quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">case</span> Preset::USB0:</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;/dev/ttyUSB0&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">case</span> Preset::Custom:</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeda1d1df0be659097a0178fe5706ce6a" name="aeda1d1df0be659097a0178fe5706ce6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda1d1df0be659097a0178fe5706ce6a">&#9670;&#160;</a></span>getBaudrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned ArduinoParser::getBaudrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el baudrate que se aplicará al abrir el puerto. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor numérico del baudrate. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00085">85</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">return</span> _baud;</div>
+<div class="line"><span class="lineno">   88</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab50709de9e80afdf6e61caa013f86336" name="ab50709de9e80afdf6e61caa013f86336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50709de9e80afdf6e61caa013f86336">&#9670;&#160;</a></span>getPreset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> ArduinoParser::getPreset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el preset actualmente configurado. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor del preset activo. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00080">80</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>{</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> _preset;</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa69fa4dea0186bb2eee825e9da36426f" name="aa69fa4dea0186bb2eee825e9da36426f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69fa4dea0186bb2eee825e9da36426f">&#9670;&#160;</a></span>listenUntilEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArduinoParser::listenUntilEnter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia el ciclo de lectura hasta que el usuario presione ENTER en STDIN. </p>
+<p>Cada línea terminada en '<br  />
+' debe reenviarse mediante <a class="el" href="classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9" title="Procesa una línea cruda del puerto serie.">LineaDispatcher::onRawLine()</a>. <a class="el" href="classLineaDispatcher.html" title="Gestiona las tramas crudas recibidas y coordina la decodificación.">LineaDispatcher</a> es quien valida y procesa cada cadena recibida.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>true cuando el bucle concluyó sin fallas fatales; false en caso de error. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00199">199</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>{</div>
+<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span> (_fd &lt; 0) {</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  203</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, <span class="stringliteral">&quot;Puerto serie no disponible.&quot;</span>);</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  206</span>    }</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  209</span>        _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;STATUS&quot;</span>, <span class="stringliteral">&quot;ENTER detiene la captura.&quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>    <span class="keywordtype">char</span> recibido[256];</div>
+<div class="line"><span class="lineno">  213</span>    std::size_t usados = 0;</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordtype">bool</span> overflow = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    <span class="keywordtype">bool</span> continuar = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">while</span> (continuar) {</div>
+<div class="line"><span class="lineno">  218</span>        fd_set lectura;</div>
+<div class="line"><span class="lineno">  219</span>        FD_ZERO(&amp;lectura);</div>
+<div class="line"><span class="lineno">  220</span>        FD_SET(_fd, &amp;lectura);</div>
+<div class="line"><span class="lineno">  221</span>        FD_SET(STDIN_FILENO, &amp;lectura);</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> maxFd = (_fd &gt; STDIN_FILENO) ? _fd : STDIN_FILENO;</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> resultado = select(maxFd + 1, &amp;lectura, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (resultado &lt; 0) {</div>
+<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">if</span> (errno == EINTR) {</div>
+<div class="line"><span class="lineno">  227</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  228</span>            }</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  230</span>                _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, <span class="stringliteral">&quot;select() reportó un fallo.&quot;</span>);</div>
+<div class="line"><span class="lineno">  231</span>            }</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">if</span> (FD_ISSET(STDIN_FILENO, &amp;lectura)) {</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordtype">char</span> buffer[32];</div>
+<div class="line"><span class="lineno">  237</span>            <span class="keyword">const</span> ssize_t leidos = ::read(STDIN_FILENO, buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> (leidos &gt; 0) {</div>
+<div class="line"><span class="lineno">  239</span>                <span class="keywordflow">for</span> (ssize_t i = 0; i &lt; leidos; ++i) {</div>
+<div class="line"><span class="lineno">  240</span>                    <span class="keywordflow">if</span> (buffer[i] == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><span class="lineno">  241</span>                        continuar = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  242</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  243</span>                    }</div>
+<div class="line"><span class="lineno">  244</span>                }</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>        }</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (!continuar) {</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  250</span>        }</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (FD_ISSET(_fd, &amp;lectura)) {</div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordtype">char</span> buffer[64];</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keyword">const</span> ssize_t leidos = ::read(_fd, buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">if</span> (leidos &gt; 0) {</div>
+<div class="line"><span class="lineno">  256</span>                <span class="keywordflow">for</span> (ssize_t i = 0; i &lt; leidos; ++i) {</div>
+<div class="line"><span class="lineno">  257</span>                    <span class="keywordtype">char</span> c = buffer[i];</div>
+<div class="line"><span class="lineno">  258</span>                    <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;\r&#39;</span>) {</div>
+<div class="line"><span class="lineno">  259</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  260</span>                    }</div>
+<div class="line"><span class="lineno">  261</span>                    <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><span class="lineno">  262</span>                        <span class="keywordflow">if</span> (usados &gt; 0) {</div>
+<div class="line"><span class="lineno">  263</span>                            recibido[usados] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  264</span>                            <span class="keywordflow">if</span> (_target) {</div>
+<div class="line"><span class="lineno">  265</span>                                _target-&gt;<a class="code hl_function" href="classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9">onRawLine</a>(recibido);</div>
+<div class="line"><span class="lineno">  266</span>                            }</div>
+<div class="line"><span class="lineno">  267</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (overflow &amp;&amp; _logger) {</div>
+<div class="line"><span class="lineno">  268</span>                            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Trama descartada por exceder el buffer.&quot;</span>);</div>
+<div class="line"><span class="lineno">  269</span>                        }</div>
+<div class="line"><span class="lineno">  270</span>                        usados = 0;</div>
+<div class="line"><span class="lineno">  271</span>                        overflow = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  272</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  273</span>                        <span class="keywordflow">if</span> (usados + 1 &lt; <span class="keyword">sizeof</span>(recibido)) {</div>
+<div class="line"><span class="lineno">  274</span>                            recibido[usados++] = c;</div>
+<div class="line"><span class="lineno">  275</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  276</span>                            overflow = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  277</span>                        }</div>
+<div class="line"><span class="lineno">  278</span>                    }</div>
+<div class="line"><span class="lineno">  279</span>                }</div>
+<div class="line"><span class="lineno">  280</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (leidos == 0) {</div>
+<div class="line"><span class="lineno">  281</span>                <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  282</span>                    _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Desconexión detectada en el puerto serie.&quot;</span>);</div>
+<div class="line"><span class="lineno">  283</span>                }</div>
+<div class="line"><span class="lineno">  284</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  285</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (errno != EAGAIN &amp;&amp; errno != EWOULDBLOCK) {</div>
+<div class="line"><span class="lineno">  286</span>                <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  287</span>                    _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Fallo al leer del puerto serie.&quot;</span>);</div>
+<div class="line"><span class="lineno">  288</span>                }</div>
+<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  290</span>            }</div>
+<div class="line"><span class="lineno">  291</span>        }</div>
+<div class="line"><span class="lineno">  292</span>    }</div>
+<div class="line"><span class="lineno">  293</span> </div>
+<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  295</span>}</div>
+<div class="ttc" id="aclassLineaDispatcher_html_a5783dde94762d452d836b2ae2acc9fc9"><div class="ttname"><a href="classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9">LineaDispatcher::onRawLine</a></div><div class="ttdeci">void onRawLine(const char *linea)</div><div class="ttdoc">Procesa una línea cruda del puerto serie.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8cpp_source.html#l00073">LineaDispatcher.cpp:73</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aba9a7fff625881bf1f618925b3f14c68" name="aba9a7fff625881bf1f618925b3f14c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9a7fff625881bf1f618925b3f14c68">&#9670;&#160;</a></span>openPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArduinoParser::openPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abre y configura el puerto serie según el preset y la ruta personalizada. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si el descriptor se abrió y configuró correctamente; false en caso contrario. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00103">103</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span> (_fd &gt;= 0) {</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_function" href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">closePort</a>();</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">if</span> (_preset == Preset::Custom) {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  111</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;El preset Custom está deshabilitado.&quot;</span>);</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordtype">char</span> ruta[kMaxRuta + 1];</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* predeterminada = <a class="code hl_function" href="classArduinoParser.html#a08ccee81fde470b3844850934c1dade4">defaultPathFor</a>(_preset);</div>
+<div class="line"><span class="lineno">  118</span>    std::strncpy(ruta, predeterminada, <span class="keyword">sizeof</span>(ruta));</div>
+<div class="line"><span class="lineno">  119</span>    ruta[<span class="keyword">sizeof</span>(ruta) - 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    _fd = ::open(ruta, O_RDWR | O_NOCTTY | O_NONBLOCK);</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (_fd &lt; 0) {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  124</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, <span class="stringliteral">&quot;No se pudo abrir el puerto serie.&quot;</span>);</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    termios opciones {};</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> (tcgetattr(_fd, &amp;opciones) != 0) {</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  132</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, <span class="stringliteral">&quot;tcgetattr falló al leer la configuración.&quot;</span>);</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_function" href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">closePort</a>();</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    speed_t velocidad = traducirBaudRate(_baud);</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span> (velocidad == B0) {</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  141</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;Baudrate no soportado, se usará 115200.&quot;</span>);</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>        velocidad = B115200;</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    cfsetispeed(&amp;opciones, velocidad);</div>
+<div class="line"><span class="lineno">  147</span>    cfsetospeed(&amp;opciones, velocidad);</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>    opciones.c_cflag |= (CLOCAL | CREAD);</div>
+<div class="line"><span class="lineno">  150</span>    opciones.c_cflag &amp;= ~CSIZE;</div>
+<div class="line"><span class="lineno">  151</span>    opciones.c_cflag |= CS8;</div>
+<div class="line"><span class="lineno">  152</span>    opciones.c_cflag &amp;= ~(PARENB | CSTOPB | CRTSCTS);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    opciones.c_iflag &amp;= ~(IXON | IXOFF | IXANY);</div>
+<div class="line"><span class="lineno">  155</span>    opciones.c_iflag &amp;= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL);</div>
+<div class="line"><span class="lineno">  156</span>    opciones.c_lflag &amp;= ~(ICANON | ECHO | ECHOE | ISIG);</div>
+<div class="line"><span class="lineno">  157</span>    opciones.c_oflag &amp;= ~OPOST;</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    opciones.c_cc[VMIN] = 0;</div>
+<div class="line"><span class="lineno">  160</span>    opciones.c_cc[VTIME] = 1;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span> (tcsetattr(_fd, TCSANOW, &amp;opciones) != 0) {</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  164</span>            _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, <span class="stringliteral">&quot;tcsetattr falló al configurar el puerto.&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_function" href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">closePort</a>();</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordtype">int</span> flags = 0;</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">if</span> (ioctl(_fd, TIOCMGET, &amp;flags) != -1) {</div>
+<div class="line"><span class="lineno">  172</span>        flags |= (TIOCM_DTR | TIOCM_RTS);</div>
+<div class="line"><span class="lineno">  173</span>        ioctl(_fd, TIOCMSET, &amp;flags);</div>
+<div class="line"><span class="lineno">  174</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  175</span>        _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;No se pudieron activar DTR/RTS.&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordtype">int</span> fcntlFlags = fcntl(_fd, F_GETFL, 0);</div>
+<div class="line"><span class="lineno">  179</span>    fcntl(_fd, F_SETFL, fcntlFlags &amp; ~O_NONBLOCK);</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">if</span> (_logger) {</div>
+<div class="line"><span class="lineno">  182</span>        _logger-&gt;<a class="code hl_function" href="classAuxiliarCli.html#a12e3201cf8b5a13560b03769f99213df">imprimirLog</a>(<span class="stringliteral">&quot;STATUS&quot;</span>, <span class="stringliteral">&quot;Puerto serie abierto correctamente.&quot;</span>);</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  186</span>}</div>
+<div class="ttc" id="aclassArduinoParser_html_a017e55dbe703a9d90a285551da510dc3"><div class="ttname"><a href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">ArduinoParser::closePort</a></div><div class="ttdeci">void closePort() noexcept</div><div class="ttdoc">Cierra el descriptor abierto, si existe.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00188">ArduinoParser.cpp:188</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_a08ccee81fde470b3844850934c1dade4"><div class="ttname"><a href="classArduinoParser.html#a08ccee81fde470b3844850934c1dade4">ArduinoParser::defaultPathFor</a></div><div class="ttdeci">static const char * defaultPathFor(Preset p) noexcept</div><div class="ttdoc">Devuelve la ruta predeterminada asociada a un preset dado.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00090">ArduinoParser.cpp:90</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa68c7bf6eb43a94239921298e694e4f7" name="aa68c7bf6eb43a94239921298e694e4f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68c7bf6eb43a94239921298e694e4f7">&#9670;&#160;</a></span>setBaudrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArduinoParser::setBaudrate </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>baud</em> = <code>115200</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ajusta el baudrate que se intentará aplicar al abrir el puerto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baud</td><td>Valor deseado; por defecto 115200 (configuración 8N1 sin flow control). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00070">70</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
+<div class="line"><span class="lineno">   72</span>    _baud = baud;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6743dcb3bfd338e9c79ec84388d83a72" name="a6743dcb3bfd338e9c79ec84388d83a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6743dcb3bfd338e9c79ec84388d83a72">&#9670;&#160;</a></span>setCustomPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArduinoParser::setCustomPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Almacena la ruta personalizada cuando el preset sea Preset::Custom. </p>
+<p>En la aplicación actual el preset Custom está deshabilitado, por lo que esta configuración no se utiliza.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta completa hacia el dispositivo serie elegida por el usuario. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00055">55</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (!path) {</div>
+<div class="line"><span class="lineno">   58</span>        _customPath[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    std::size_t longitud = std::strlen(path);</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">if</span> (longitud &gt; kMaxRuta) {</div>
+<div class="line"><span class="lineno">   64</span>        longitud = kMaxRuta;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>    std::memcpy(_customPath, path, longitud);</div>
+<div class="line"><span class="lineno">   67</span>    _customPath[longitud] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa7f762c7602627680f8e54af187abbeb" name="aa7f762c7602627680f8e54af187abbeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f762c7602627680f8e54af187abbeb">&#9670;&#160;</a></span>setPreset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArduinoParser::setPreset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define el preset que resolverá la ruta del dispositivo serie. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Nuevo preset a emplear al abrir el puerto. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00050">50</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span>    _preset = p;</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8f1490a0656a6caf7330bc2b35b76733" name="a8f1490a0656a6caf7330bc2b35b76733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f1490a0656a6caf7330bc2b35b76733">&#9670;&#160;</a></span>setTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArduinoParser::setTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLineaDispatcher.html">LineaDispatcher</a> *&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cambia el objetivo que recibirá las líneas crudas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Instancia de <a class="el" href="classLineaDispatcher.html" title="Gestiona las tramas crudas recibidas y coordina la decodificación.">LineaDispatcher</a>; puede ser nula para desactivar el reenvío. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="ArduinoParser_8cpp_source.html#l00075">75</a> del archivo <a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>    _target = target;</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>include/<a class="el" href="ArduinoParser_8h_source.html">ArduinoParser.h</a></li>
+<li>src/<a class="el" href="ArduinoParser_8cpp_source.html">ArduinoParser.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classArduinoParser.html">ArduinoParser</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="include/TramaLoad.h" name="include/TramaLoad.h">
+<area shape="rect" id="Node000001" title="Declara la trama de carga del protocolo PRT&#45;7." alt="" coords="107,5,263,31"/>
+<area shape="rect" id="Node000002" href="$LineaDispatcher_8cpp_source.html" title=" " alt="" coords="5,79,181,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,41,110,81,107,76,158,37"/>
+<area shape="rect" id="Node000003" href="$TramaLoad_8cpp_source.html" title=" " alt="" coords="206,79,349,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,37,264,76,261,81,209,41"/>
+</map>

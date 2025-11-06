@@ -1,0 +1,5 @@
+<map id="include/TramaMap.h" name="include/TramaMap.h">
+<area shape="rect" id="Node000001" title="Declara la trama de rotación del protocolo PRT&#45;7." alt="" coords="5,5,159,31"/>
+<area shape="rect" id="Node000002" href="$TramaBase_8h.html" title="Clase base para cualquier trama del protocolo PRT&#45;7." alt="" coords="29,79,135,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,31,85,65,79,65,79,31"/>
+</map>

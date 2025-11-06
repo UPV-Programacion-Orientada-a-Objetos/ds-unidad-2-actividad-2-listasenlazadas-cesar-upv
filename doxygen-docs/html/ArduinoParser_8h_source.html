@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7): Archivo de código fuente include/ArduinoParser.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)
+   </div>
+   <div id="projectbrief">Unidad 2 | Actividad 2 | Estructuras de Datos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ArduinoParser_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ArduinoParser.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ArduinoParser_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="classLineaDispatcher.html">LineaDispatcher</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">   21</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> { ACM0, USB0, Custom };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classArduinoParser.html">   29</a></span><span class="keyword">class </span><a class="code hl_class" href="classArduinoParser.html">ArduinoParser</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classArduinoParser.html">ArduinoParser</a>(<a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>* logger = <span class="keyword">nullptr</span>, <a class="code hl_class" href="classLineaDispatcher.html">LineaDispatcher</a>* target = <span class="keyword">nullptr</span>) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classArduinoParser.html#aa7f762c7602627680f8e54af187abbeb">setPreset</a>(<a class="code hl_enumeration" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> p) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classArduinoParser.html#a6743dcb3bfd338e9c79ec84388d83a72">setCustomPath</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classArduinoParser.html#aa68c7bf6eb43a94239921298e694e4f7">setBaudrate</a>(<span class="keywordtype">unsigned</span> baud = 115200) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classArduinoParser.html#a8f1490a0656a6caf7330bc2b35b76733">setTarget</a>(<a class="code hl_class" href="classLineaDispatcher.html">LineaDispatcher</a>* target) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_enumeration" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> <a class="code hl_function" href="classArduinoParser.html#ab50709de9e80afdf6e61caa013f86336">getPreset</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">unsigned</span> <a class="code hl_function" href="classArduinoParser.html#aeda1d1df0be659097a0178fe5706ce6a">getBaudrate</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classArduinoParser.html#aba9a7fff625881bf1f618925b3f14c68">openPort</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">closePort</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classArduinoParser.html#aa69fa4dea0186bb2eee825e9da36426f">listenUntilEnter</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classArduinoParser.html#a08ccee81fde470b3844850934c1dade4">defaultPathFor</a>(<a class="code hl_enumeration" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> p) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::size_t kMaxRuta = 255;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">int</span> _fd;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_enumeration" href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a> _preset;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">unsigned</span> _baud;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">char</span> _customPath[kMaxRuta + 1];</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_class" href="classAuxiliarCli.html">AuxiliarCli</a>* _logger;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_class" href="classLineaDispatcher.html">LineaDispatcher</a>* _target;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
+</div>
+<div class="ttc" id="aArduinoParser_8h_html_ad9b61b7f2b7dbe4c6816a994778e318f"><div class="ttname"><a href="ArduinoParser_8h.html#ad9b61b7f2b7dbe4c6816a994778e318f">Preset</a></div><div class="ttdeci">Preset</div><div class="ttdoc">Presets válidos para elegir el dispositivo serie.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8h_source.html#l00021">ArduinoParser.h:21</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html"><div class="ttname"><a href="classArduinoParser.html">ArduinoParser</a></div><div class="ttdoc">Gestiona las lecturas crudas del puerto serie y las reenvía.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8h_source.html#l00029">ArduinoParser.h:29</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_a017e55dbe703a9d90a285551da510dc3"><div class="ttname"><a href="classArduinoParser.html#a017e55dbe703a9d90a285551da510dc3">ArduinoParser::closePort</a></div><div class="ttdeci">void closePort() noexcept</div><div class="ttdoc">Cierra el descriptor abierto, si existe.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00188">ArduinoParser.cpp:188</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_a08ccee81fde470b3844850934c1dade4"><div class="ttname"><a href="classArduinoParser.html#a08ccee81fde470b3844850934c1dade4">ArduinoParser::defaultPathFor</a></div><div class="ttdeci">static const char * defaultPathFor(Preset p) noexcept</div><div class="ttdoc">Devuelve la ruta predeterminada asociada a un preset dado.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00090">ArduinoParser.cpp:90</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_a6743dcb3bfd338e9c79ec84388d83a72"><div class="ttname"><a href="classArduinoParser.html#a6743dcb3bfd338e9c79ec84388d83a72">ArduinoParser::setCustomPath</a></div><div class="ttdeci">void setCustomPath(const char *path) noexcept</div><div class="ttdoc">Almacena la ruta personalizada cuando el preset sea Preset::Custom.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00055">ArduinoParser.cpp:55</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_a8f1490a0656a6caf7330bc2b35b76733"><div class="ttname"><a href="classArduinoParser.html#a8f1490a0656a6caf7330bc2b35b76733">ArduinoParser::setTarget</a></div><div class="ttdeci">void setTarget(LineaDispatcher *target) noexcept</div><div class="ttdoc">Cambia el objetivo que recibirá las líneas crudas.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00075">ArduinoParser.cpp:75</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_aa68c7bf6eb43a94239921298e694e4f7"><div class="ttname"><a href="classArduinoParser.html#aa68c7bf6eb43a94239921298e694e4f7">ArduinoParser::setBaudrate</a></div><div class="ttdeci">void setBaudrate(unsigned baud=115200) noexcept</div><div class="ttdoc">Ajusta el baudrate que se intentará aplicar al abrir el puerto.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00070">ArduinoParser.cpp:70</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_aa69fa4dea0186bb2eee825e9da36426f"><div class="ttname"><a href="classArduinoParser.html#aa69fa4dea0186bb2eee825e9da36426f">ArduinoParser::listenUntilEnter</a></div><div class="ttdeci">bool listenUntilEnter()</div><div class="ttdoc">Inicia el ciclo de lectura hasta que el usuario presione ENTER en STDIN.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00199">ArduinoParser.cpp:199</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_aa7f762c7602627680f8e54af187abbeb"><div class="ttname"><a href="classArduinoParser.html#aa7f762c7602627680f8e54af187abbeb">ArduinoParser::setPreset</a></div><div class="ttdeci">void setPreset(Preset p) noexcept</div><div class="ttdoc">Define el preset que resolverá la ruta del dispositivo serie.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00050">ArduinoParser.cpp:50</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_ab50709de9e80afdf6e61caa013f86336"><div class="ttname"><a href="classArduinoParser.html#ab50709de9e80afdf6e61caa013f86336">ArduinoParser::getPreset</a></div><div class="ttdeci">Preset getPreset() const noexcept</div><div class="ttdoc">Devuelve el preset actualmente configurado.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00080">ArduinoParser.cpp:80</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_aba9a7fff625881bf1f618925b3f14c68"><div class="ttname"><a href="classArduinoParser.html#aba9a7fff625881bf1f618925b3f14c68">ArduinoParser::openPort</a></div><div class="ttdeci">bool openPort()</div><div class="ttdoc">Abre y configura el puerto serie según el preset y la ruta personalizada.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00103">ArduinoParser.cpp:103</a></div></div>
+<div class="ttc" id="aclassArduinoParser_html_aeda1d1df0be659097a0178fe5706ce6a"><div class="ttname"><a href="classArduinoParser.html#aeda1d1df0be659097a0178fe5706ce6a">ArduinoParser::getBaudrate</a></div><div class="ttdeci">unsigned getBaudrate() const noexcept</div><div class="ttdoc">Devuelve el baudrate que se aplicará al abrir el puerto.</div><div class="ttdef"><b>Definition</b> <a href="ArduinoParser_8cpp_source.html#l00085">ArduinoParser.cpp:85</a></div></div>
+<div class="ttc" id="aclassAuxiliarCli_html"><div class="ttname"><a href="classAuxiliarCli.html">AuxiliarCli</a></div><div class="ttdoc">Auxilia a la interfaz de consola con logs y lectura validada.</div><div class="ttdef"><b>Definition</b> <a href="AuxiliarCli_8h_source.html#l00015">AuxiliarCli.h:16</a></div></div>
+<div class="ttc" id="aclassLineaDispatcher_html"><div class="ttname"><a href="classLineaDispatcher.html">LineaDispatcher</a></div><div class="ttdoc">Gestiona las tramas crudas recibidas y coordina la decodificación.</div><div class="ttdef"><b>Definition</b> <a href="LineaDispatcher_8h_source.html#l00017">LineaDispatcher.h:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="ArduinoParser_8h.html">ArduinoParser.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
