@@ -1,0 +1,374 @@
+\documentclass[12pt, twocolumn, twoside]{article}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amsmath}
+
+% Configuración de márgenes
+\geometry{
+    top=2cm,
+    bottom=2cm,
+    left=1.5cm,
+    right=1.5cm,
+    headheight=1cm,
+    headsep=0.5cm
+}
+
+% Configuración de encabezados y pies de página
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small César Euresti}
+\lhead{\small PRT-7 Decodificador}
+\cfoot{\thepage}
+
+% Configuración de colores para código
+\definecolor{codegreen}{rgb}{0, 0.5, 0}
+\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
+\definecolor{backcolour}{rgb}{0.95, 0.95, 0.95}
+
+\lstset{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    language=C++
+}
+
+% Formato de títulos
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Título y autor
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+% ==================== PORTADA ====================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Large \textbf{Universidad Politécnica de Victoria} \\[0.5cm]}
+    {\normalsize Ingeniería en Tecnologías de la Información e Innovación Digital \\[2cm]}
+    
+    \vfill
+    
+    {\huge \textbf{Decodificador de Protocolo Industrial} \\[0.2cm]}
+    {\huge \textbf{PRT-7} \\[2cm]}
+    
+    {\large \textbf{Reporte Técnico} \\[1.5cm]}
+    
+    \vfill
+    
+    {\large \textbf{Alumno:} César Euresti \\[0.5cm]}
+    {\large \textbf{Asignatura:} Estructura de Datos \\[0.5cm]}
+    {\large \textbf{Fecha:} \today}
+    
+    \vfill
+    
+\end{titlepage}
+
+% ==================== TABLA DE CONTENIDOS ====================
+\onecolumn
+\tableofcontents
+\newpage
+\twocolumn
+
+% ==================== 1. INTRODUCCIÓN ====================
+\section{Introducción}
+
+El presente reporte documenta la implementación de un \textbf{Decodificador de Protocolo Industrial PRT-7}, un sistema complejo que integra conceptos fundamentales de Programación Orientada a Objetos y Estructuras de Datos en C++.
+
+\subsection{Contexto del Problema}
+
+La firma de ciberseguridad ha interceptado un protocolo de comunicación serial no encriptado proveniente de dispositivos Arduino. Sin embargo, el protocolo no envía mensajes directos, sino que implementa un mecanismo de \textit{ensamblaje dinámico} donde dos tipos de tramas cooperan para revelar el mensaje oculto:
+
+\begin{itemize}
+    \item \textbf{Tramas LOAD (L):} Transportan fragmentos de datos individuales (caracteres).
+    \item \textbf{Tramas MAP (M):} Contienen instrucciones para reordenar y transformar los datos ya recibidos.
+\end{itemize}
+
+El desafío radica en que las operaciones MAP modifican dinámicamente el significado de cada fragmento, similar a un rotor de cifrado tipo Enigma, creando un sistema donde la estructura de datos y la lógica de procesamiento están intrínsecamente acopladas.
+
+\subsection{Objetivos}
+
+\begin{enumerate}
+    \item Implementar una arquitectura orientada a objetos que modele la heterogeneidad de tramas mediante herencia y polimorfismo.
+    \item Desarrollar estructuras de datos enlazadas manualmente: \textit{Lista Doblemente Enlazada} y \textit{Lista Circular}.
+    \item Integrar comunicación serial para leer datos del puerto COM.
+    \item Demostrar la gestión eficiente de memoria mediante el uso de punteros y \textit{operador new/delete}.
+\end{enumerate}
+
+% ==================== 2. MANUAL TÉCNICO ====================
+\section{Manual Técnico}
+
+\subsection{Diseño Arquitectónico}
+
+El sistema implementa una arquitectura basada en \textbf{herencia polimórfica} que permite tratar diferentes tipos de tramas de manera uniforme a través de una interfaz común.
+
+\subsubsection{Jerarquía de Clases}
+
+La base del sistema es la clase abstracta \texttt{TramaBase}, que define el contrato que toda trama debe cumplir:
+
+\begin{lstlisting}
+class TramaBase {
+public:
+    virtual void procesar(ListaDeCarga* carga,
+                          RotorDeMapeo* rotor) = 0;
+    virtual ~TramaBase() {}
+};
+\end{lstlisting}
+
+De esta clase heredan dos implementaciones concretas:
+
+\begin{itemize}
+    \item \textbf{TramaLoad:} Encapsula una trama `L,X` donde `X` es un carácter. Su método `procesar()` inserta el carácter mapeado en la lista de carga.
+    
+    \item \textbf{TramaMap:} Encapsula una trama `M,N` donde `N` es un entero positivo o negativo. Su método `procesar()` rota el rotor de mapeo `N` posiciones.
+\end{itemize}
+
+\subsubsection{Estructura: ListaDeCarga}
+
+La \texttt{ListaDeCarga} es una \textbf{Lista Doblemente Enlazada} que almacena los caracteres decodificados en el orden de llegada:
+
+\begin{lstlisting}
+class ListaDeCarga {
+private:
+    struct Nodo {
+        char dato;
+        Nodo* siguiente;
+        Nodo* anterior;
+    };
+    Nodo* cabeza;
+public:
+    void insertarAlFinal(char dato);
+    void imprimirMensaje() const;
+};
+\end{lstlisting}
+
+\textbf{Operaciones principales:}
+\begin{itemize}
+    \item \texttt{insertarAlFinal(char):} Añade un carácter al final de la lista, preservando el orden de llegada.
+    \item \texttt{imprimirMensaje():} Recorre la lista y despliega el mensaje completo decodificado.
+\end{itemize}
+
+\subsubsection{Estructura: RotorDeMapeo}
+
+El \texttt{RotorDeMapeo} es una \textbf{Lista Circular Doblemente Enlazada} que actúa como un disco de cifrado (similar a una Rueda de César):
+
+\begin{lstlisting}
+class RotorDeMapeo {
+private:
+    struct Nodo {
+        char letra;
+        Nodo* siguiente;
+        Nodo* anterior;
+    };
+    Nodo* cabeza;
+public:
+    void rotar(int n);
+    char getMapeo(char entrada);
+};
+\end{lstlisting}
+
+\textbf{Operaciones principales:}
+\begin{itemize}
+    \item \texttt{rotar(int n):} Desplaza la posición de `cabeza` circularmente `n` posiciones. Los valores negativos rotan en dirección inversa.
+    \item \texttt{getMapeo(char):} Localiza el carácter de entrada en la lista, determina su distancia a `cabeza`, y devuelve el carácter mapeado correspondiente.
+\end{itemize}
+
+\subsection{Componentes del Sistema}
+
+El sistema está compuesto por los siguientes módulos:
+
+\subsubsection{ArduinoParser}
+
+Este componente gestiona la comunicación con el puerto serial del Arduino:
+
+\begin{itemize}
+    \item Abre la conexión con el dispositivo Arduino (típicamente `/dev/ttyACM0` en Linux).
+    \item Lee líneas de texto del buffer del puerto.
+    \item Proporciona métodos para verificar disponibilidad de datos.
+\end{itemize}
+
+\subsubsection{LineaDispatcher}
+
+El dispatcher es el orquestador principal del sistema:
+
+\begin{itemize}
+    \item Recibe cadenas del parser serial.
+    \item Determina el tipo de trama (LOAD o MAP).
+    \item Instancia los objetos `TramaLoad` o `TramaMap` correspondientes.
+    \item Invoca el método `procesar()` polimórfico.
+    \item Gestiona la liberación de memoria.
+\end{itemize}
+
+\subsubsection{Gestión de Memoria}
+
+La aplicación implementa \textbf{gestión manual de memoria} mediante `new` y `delete`:
+
+\begin{lstlisting}
+TramaBase* trama = nullptr;
+if (tipo == 'L') {
+    trama = new TramaLoad(caracter);
+} else {
+    trama = new TramaMap(numero);
+}
+
+trama->procesar(&listaCarga, &rotor);
+delete trama;  // Memory liberation
+\end{lstlisting}
+
+La destrucción polimórfica es segura porque `TramaBase` posee un destructor virtual.
+
+\subsection{Flujo de Procesamiento}
+
+El algoritmo de decodificación procede en los siguientes pasos:
+
+\begin{enumerate}
+    \item \textbf{Inicialización:} Se crea la `ListaDeCarga` (vacía) y el `RotorDeMapeo` (A-Z, cabeza en 'A').
+    
+    \item \textbf{Lectura Serial:} El programa abre el puerto serial del dispositivo Arduino (ej. `/dev/ttyACM0` en Linux) y espera datos.
+    
+    \item \textbf{Análisis de Tramas:} Para cada línea recibida:
+    \begin{itemize}
+        \item Se parsea el formato: `L,X` o `M,N`
+        \item Se identifica el tipo y se extrae el parámetro
+    \end{itemize}
+    
+    \item \textbf{Procesamiento Polimórfico:} Se ejecuta el método `procesar()` apropiado:
+    \begin{itemize}
+        \item \textbf{Para TramaLoad:} Se mapea el carácter a través del RotorDeMapeo y se inserta en la ListaDeCarga.
+        \item \textbf{Para TramaMap:} Se rota el RotorDeMapeo, alterando el estado del mapeo para futuras operaciones LOAD.
+    \end{itemize}
+    
+    \item \textbf{Descodificación Final:} Una vez procesadas todas las tramas, se imprime el mensaje decodificado.
+\end{enumerate}
+
+\subsection{Ejemplo de Ejecución}
+
+Consideremos el siguiente flujo:
+
+\begin{lstlisting}[numbers=none]
+Entrada:    L,A    M,3    L,B    M,-1   L,C
+Rotor:      [A-Z]  Rota 3  Rota -1  (...)
+Salida:     Mensaje decodificado
+\end{lstlisting}
+
+Cuando llega `L,A`:
+\begin{itemize}
+    \item El RotorDeMapeo está en posición \textit{cabeza} en 'A'
+    \item Se busca 'A' en el rotor, se encuentra en posición 0
+    \item Se mapea el carácter y se inserta
+\end{itemize}
+
+Cuando llega `M,3`:
+\begin{itemize}
+    \item El RotorDeMapeo rota 3 posiciones: cabeza ahora apunta a 'D'
+    \item El estado del mapeo cambia para futuras operaciones LOAD
+\end{itemize}
+
+\subsection{Diagramas de Arquitectura}
+
+Esta subsección presenta los diagramas automáticos generados por Doxygen, que ilustran la arquitectura del sistema a nivel de implementación.
+
+\subsubsection{Jerarquía de Herencia}
+
+La siguiente imagen muestra la jerarquía de clases y las relaciones de herencia entre la clase base abstracta `TramaBase` y sus implementaciones concretas:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.18\textwidth]{graphics/class-hierarchy.png}
+    \caption{Diagrama de herencia de TramaBase}
+    \label{fig:herencia}
+\end{figure}
+
+\subsubsection{Grafo de Colaboraciones}
+
+Los siguientes diagramas muestran las colaboraciones y dependencias de cada clase especializada:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.16\textwidth]{graphics/tramaload-coll.png}
+    \caption{Colaboraciones de TramaLoad}
+    \label{fig:tramaload_coll}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.16\textwidth]{graphics/tramamap-coll.png}
+    \caption{Colaboraciones de TramaMap}
+    \label{fig:tramamap_coll}
+\end{figure}
+
+Estos diagramas revelan como cada tipo de trama interactúa con las estructuras de datos principales (ListaDeCarga y RotorDeMapeo) mediante sus métodos virtuales.
+
+% ==================== SECCIÓN DE CAPTURAS ====================
+\onecolumn
+
+\section{Capturas de Pantalla}
+
+Las siguientes imágenes documentan la ejecución del programa:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/start-program.png}
+    \caption{Inicio del programa y menu principal}
+    \label{fig:inicio}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/port-presets.png}
+    \caption{Configuracion de puertos preestablecidos}
+    \label{fig:puertos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/readme-simulation.png}
+    \caption{Simulacion del protocolo PRT-7}
+    \label{fig:simulacion}
+\end{figure}
+
+% ==================== CONCLUSIONES ====================
+\twocolumn
+
+\section{Conclusiones}
+
+La implementación del Decodificador PRT-7 demuestra la integración efectiva de:
+
+\begin{itemize}
+    \item \textbf{Programación Orientada a Objetos:} Mediante herencia polimórfica y métodos virtuales.
+    \item \textbf{Estructuras de Datos:} Listas enlazadas doblemente enlazadas y circulares, implementadas manualmente.
+    \item \textbf{Gestión de Memoria:} Asignación dinámica segura con destructores virtuales.
+    \item \textbf{Comunicación Serial:} Integración con dispositivos hardware reales.
+\end{itemize}
+
+Este proyecto es un ejemplo educativo valioso que prepara al ingeniero para sistemas embebidos complejos y comunicación de protocolos industriales.
+
+\end{document}
