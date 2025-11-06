@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7): Página principal</title>
+<title>Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7): Requisitos - README.md</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,10 +89,199 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7) documentación</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Requisitos - README.md </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a href="https://classroom.github.com/a/zp6HS-Kj"><img src="https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg" alt="Review Assignment Due Date" style="pointer-events: none;" class="inline"/></a> <a href="https://classroom.github.com/open-in-codespaces?assignment_repo_id=21473977"><img src="https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg" alt="Open in Codespaces" style="pointer-events: none;" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Definición del Problema a Resolver (El Caso de Estudio)</h2>
+<p>Ustedes han sido contratados como ingenieros de software senior en una firma de ciberseguridad industrial. Un competidor ha estado interceptando la telemetría de sus sensores (simulados por un dispositivo Arduino), pero no han podido descifrarla.</p>
+<p>Se ha descubierto que el Arduino no envía datos encriptados, sino que transmite un <b>protocolo de ensamblaje de mensajes ocultos</b> llamado PRT-7. El protocolo no envía un mensaje, sino las <em>instrucciones</em> para construir el mensaje.</p>
+<p>El Arduino envía dos tipos de tramas por el puerto serial:</p>
+<ol type="1">
+<li><b>Tramas de Carga (LOAD):</b> Contienen un fragmento de datos (un carácter).</li>
+<li><b>Tramas de Mapeo (MAP):</b> Contienen instrucciones para reordenar los fragmentos de datos ya recibidos.</li>
+</ol>
+<p>Su misión es construir un software en C++ que lea este flujo de tramas desde el puerto serial y utilice las estructuras de datos correctas para ensamblar el mensaje oculto. </p><pre class="fragment">Las tramas **LOAD** deben almacenarse en una **Lista Doblemente Enlazada**, ya que el orden de llegada es crucial.
+Las tramas **MAP** operan sobre una **Lista Circular**, que actúa como un "disco de cifrado" (similar a una Rueda de César) que mapea un carácter a otro.
+</pre><p> El desafío es que las tramas MAP modifican el estado de la Lista Circular <em>mientras</em> se procesan las tramas LOAD, haciendo que el significado de cada fragmento de dato cambie dinámicamente.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md3"></a>
+Temas Relacionados y Necesarios</h2>
+<p>Para resolver este caso de estudio, los alumnos deberán dominar la integración de los siguientes conceptos:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Tema Principal   </th><th class="markdownTableHeadLeft">Concepto a Aplicar    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>POO Avanzada (Herencia/Polimorfismo)</b>   </td><td class="markdownTableBodyLeft"><b>Clase Base Abstracta</b> (<code><a class="el" href="classTramaBase.html" title="Interface polimórfica para cualquier trama recibida del protocolo PRT-7.">TramaBase</a></code>) y <b>Clases Derivadas</b> (<code><a class="el" href="classTramaLoad.html" title="Inserta en la lista el carácter decodificado por el rotor.">TramaLoad</a></code>, <code><a class="el" href="classTramaMap.html" title="Ordena la rotación del rotor de mapeo.">TramaMap</a></code>).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Listas Doblemente Enlazadas (Manual)</b>   </td><td class="markdownTableBodyLeft">Implementación de una <code><a class="el" href="classListaDeCarga.html" title="Lista doblemente enlazada que guarda los fragmentos decodificados.">ListaDeCarga</a></code> para almacenar las tramas recibidas en orden (<code>TramaBase*</code>).    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Listas Circulares (Manual)</b>   </td><td class="markdownTableBodyLeft">Implementación de un <code><a class="el" href="classRotorDeMapeo.html" title="Rotor circular doblemente enlazado que implementa el mapeo dinámico.">RotorDeMapeo</a></code> (una Lista Circular Doblemente Enlazada) que contiene el alfabeto (A-Z) y puede rotar.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Punteros y Gestión de Memoria</b>   </td><td class="markdownTableBodyLeft">Uso de <code>new</code>/<code>delete</code> para crear nodos y objetos Trama. Gestión de punteros <code>previo</code> y <code>siguiente</code>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Comunicación Serial (Hardware)</b>   </td><td class="markdownTableBodyLeft">Lectura de datos en tiempo real desde un puerto COM (simulado por el Arduino).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Análisis de Protocolos</b>   </td><td class="markdownTableBodyLeft">Interpretación de cadenas de texto (<code>L,A</code> o <code>M,5</code>) para instanciar los objetos correctos.   </td></tr>
+</table>
+<hr  />
+<h2><a class="anchor" id="autotoc_md5"></a>
+Definición y Detalles del Proceso a Desarrollar</h2>
+<h3><a class="anchor" id="autotoc_md6"></a>
+A. Diseño de la Jerarquía de Clases (POO)</h3>
+<p>El sistema debe basarse en una interfaz común para todas las tramas recibidas.</p>
+<ol type="1">
+<li><b>Clase Base Abstracta (<code><a class="el" href="classTramaBase.html" title="Interface polimórfica para cualquier trama recibida del protocolo PRT-7.">TramaBase</a></code>):** <pre class="fragment"> **Propósito:** Define la interfaz para cualquier trama que llegue del puerto serial.
+ **Método Virtual Puro:** `virtual void procesar(ListaDeCarga* carga, RotorDeMapeo* rotor) = 0;`
+ **Destructor:** `virtual ~TramaBase() {}` (Destructor virtual OBLIGATORIO para la limpieza de memoria polimórfica).
+</pre></b></li>
+<li><b><b>Clases Concretas (Derivadas):</b> <pre class="fragment"> `TramaLoad : public TramaBase`: Representa una trama `L,X` (ej. `L,A`). Almacena el carácter `X`.
+ `TramaMap : public TramaBase`: Representa una trama `M,N` (ej. `M,5` o `M,-3`). Almacena el entero `N`.
+</pre> </b></li>
+</ol>
+<h3><a class="anchor" id="autotoc_md7"></a>
+B. Estructuras de Datos "A Mano"</h3>
+<p><b></b></p>
+<p><b></p><ol type="1">
+<li>**<code><a class="el" href="classRotorDeMapeo.html" title="Rotor circular doblemente enlazado que implementa el mapeo dinámico.">RotorDeMapeo</a></code> (Lista Circular Doblemente Enlazada):** <pre class="fragment"> Contiene nodos con &lt;tt&gt;char&lt;/tt&gt; (A-Z).
+ Debe tener un puntero &lt;tt&gt;cabeza&lt;/tt&gt; que indica la posición 'cero' actual.
+ **Método:&lt;/strong&gt; &lt;tt&gt;rotar(int N)&lt;/tt&gt;: Mueve el puntero &lt;tt&gt;cabeza&lt;/tt&gt; N posiciones (positivo o negativo) de forma circular.
+ &lt;strong&gt;Método:&lt;/strong&gt; &lt;tt&gt;getMapeo(char in)&lt;/tt&gt;: Busca el carácter &lt;tt&gt;in&lt;/tt&gt; en la lista, encuentra su posición relativa a &lt;tt&gt;cabeza&lt;/tt&gt;, y devuelve el carácter que está en la posición 'cero' (la &lt;tt&gt;cabeza&lt;/tt&gt;) si &lt;tt&gt;in&lt;/tt&gt; estuviera en esa posición (¡lógica compleja de mapeo!).
+</pre></li>
+<li>**<code><a class="el" href="classListaDeCarga.html" title="Lista doblemente enlazada que guarda los fragmentos decodificados.">ListaDeCarga</a></code> (Lista Doblemente Enlazada):** <pre class="fragment"> Contiene nodos que almacenan `char` (los datos decodificados).
+ Debe implementar `insertarAlFinal(char dato)`.
+ Debe implementar `imprimirMensaje()`.
+</pre> </li>
+</ol>
+<p></b></p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+C. Proceso de Solución Detallado (La Lógica del Decodificador)</h3>
+<p><b></b></p>
+<p><b>El programa debe gestionar dos estructuras simultáneamente:</b></p>
+<p><b></p><ol type="1">
+<li><b>Inicialización:</b> Crear la <code><a class="el" href="classListaDeCarga.html" title="Lista doblemente enlazada que guarda los fragmentos decodificados.">ListaDeCarga</a></code> (vacía) y el <code><a class="el" href="classRotorDeMapeo.html" title="Rotor circular doblemente enlazado que implementa el mapeo dinámico.">RotorDeMapeo</a></code> (cargado con A-Z, <code>cabeza</code> apuntando a 'A').</li>
+<li><b>Lectura Serial:</b> El programa debe abrir el puerto COM donde está el Arduino. Leerá líneas de texto (ej. "L,G", "M,-2").</li>
+<li><b>Bucle de Procesamiento (El Reto):</b> Para cada línea leída: <b>Parsear:</b> Determinar si es 'L' (Load) o 'M' (Map). <b>Instanciar:</b> Si es "L,G" -&gt; &lsquo;TramaBase* trama = new <a class="el" href="classTramaLoad.html" title="Inserta en la lista el carácter decodificado por el rotor.">TramaLoad</a>('G&rsquo;);<code> Si es "M,-2" -\&gt;</code>TramaBase* trama = new <a class="el" href="classTramaMap.html" title="Ordena la rotación del rotor de mapeo.">TramaMap</a>(-2);<code> **Ejecutar:** Llamar a</code>trama-&gt;procesar(&amp;miListaDeCarga, &amp;miRotorDeMapeo);<code> **Limpiar:**</code>delete trama;<code></code></li>
+<li><code>**Lógica de</code>procesar()<code>:** **</code>TramaMap::procesar(..., RotorDeMapeo* rotor)<code>:** Simplemente llama a</code>rotor-&gt;rotar(N)<code>. El disco de cifrado cambia de posición. **</code><a class="el" href="classTramaLoad.html#ade8ff3faef2c7319ea34da8a53bd5896" title="Decodifica el carácter y lo agrega a la lista de carga.">TramaLoad::procesar(ListaDeCarga* carga, RotorDeMapeo* rotor)</a>&lsquo;:** Toma el carácter de la trama (ej. 'G&rsquo;). Pregunta al rotor: &lsquo;char decodificado = rotor-&gt;getMapeo('G&rsquo;);<code>(El rotor calcula el carácter mapeado basado en su rotación actual). Inserta el resultado:</code>carga-&gt;insertarAlFinal(decodificado);<code></code></li>
+<li><code>**Resultado Final:** Al terminar el flujo de datos, llamar a</code>miListaDeCarga.imprimirMensaje()` revela el mensaje oculto.</li>
+</ol>
+<p></b></p>
+<p><b></p><hr  />
+<p></b></p>
+<p><b></b></p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Requerimientos Funcionales y No Funcionales</h2>
+<p><b></b></p>
+<p><b></b></p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+Requisitos Funcionales</h3>
+<p><b></b></p>
+<p><b></p><ol type="1">
+<li><b>Comunicación Serial:</b> El programa debe conectarse y leer con éxito las cadenas de texto enviadas por el Arduino.</li>
+<li><b>POO Polimórfica:</b> El sistema debe instanciar las clases derivadas correctas (<code><a class="el" href="classTramaLoad.html" title="Inserta en la lista el carácter decodificado por el rotor.">TramaLoad</a></code>, <code><a class="el" href="classTramaMap.html" title="Ordena la rotación del rotor de mapeo.">TramaMap</a></code>) y almacenarlas en un puntero <code>TramaBase*</code>.</li>
+<li><b>Implementación de Lista Circular:</b> El <code><a class="el" href="classRotorDeMapeo.html" title="Rotor circular doblemente enlazado que implementa el mapeo dinámico.">RotorDeMapeo</a></code> debe implementarse como una lista circular doblemente enlazada y debe manejar la rotación (positiva y negativa) correctamente.</li>
+<li><b>Implementación de Lista Doble:</b> La <code><a class="el" href="classListaDeCarga.html" title="Lista doblemente enlazada que guarda los fragmentos decodificados.">ListaDeCarga</a></code> debe almacenar los caracteres decodificados en el orden correcto.</li>
+<li><b>Decodificación:</b> El mensaje final debe ensamblarse correctamente basado en la lógica de mapeo y rotación.</li>
+<li>Uso de CMake: Se deberá generar una sistema redistribuible mediante el uso de CMake.</li>
+</ol>
+<p></b></p>
+<p><b></b></p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+Requisitos No Funcionales</h3>
+<p><b></b></p>
+<p><b></p><ol type="1">
+<li><b>Exclusividad de Punteros:</b> Prohibido el uso de la STL (<code>std::vector</code>, <code>std::list</code>, <code>std::string</code>). El manejo de listas y la lectura/parseo de cadenas debe ser manual (punteros <code>char*</code>, <code>strtok</code>, etc.).</li>
+<li><b>Gestión de Memoria:</b> No debe haber fugas de memoria. Cada <code>new</code> debe tener su <code>delete</code> correspondiente, y el destructor de la clase base debe ser <code>virtual</code>.</li>
+<li><b>Robustez:</b> El programa debe manejar tramas mal formadas del puerto serial (aunque sea de forma básica).</li>
+</ol>
+<p></b></p>
+<p><b></p><hr  />
+<p></b></p>
+<p><b></b></p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Ejemplo de Entradas y Salidas del Problema en Consola</h2>
+<p><b></b></p>
+<p><b></b></p>
+<h3><a class="anchor" id="autotoc_md15"></a>
+Simulación de Interacción (Lo que envía el Arduino)</h3>
+<p><b></b></p>
+<p><b>El Arduino debe estar programado para enviar lo siguiente, con un <code>delay(1000);</code> entre cada línea:</b></p>
+<p><b></p><div class="fragment"><div class="line">L,H</div>
+<div class="line">L,O</div>
+<div class="line">L,L</div>
+<div class="line">M,2</div>
+<div class="line">L,A</div>
+<div class="line">L,Space</div>
+<div class="line">L,W</div>
+<div class="line">M,-2</div>
+<div class="line">L,O</div>
+<div class="line">L,R</div>
+<div class="line">L,L</div>
+<div class="line">L,D</div>
+</div><!-- fragment --><p></b></p>
+<p><b></b></p>
+<h3><a class="anchor" id="autotoc_md16"></a>
+Salida Esperada del Sistema (En la Consola de C++)</h3>
+<p><b></b></p>
+<p><b></p><div class="fragment"><div class="line">Iniciando Decodificador PRT-7. Conectando a puerto COM...</div>
+<div class="line">Conexión establecida. Esperando tramas...</div>
+<div class="line"> </div>
+<div class="line">Trama recibida: [L,H] -&gt; Procesando... -&gt; Fragmento &#39;H&#39; decodificado como &#39;H&#39;. Mensaje: [H]</div>
+<div class="line">Trama recibida: [L,O] -&gt; Procesando... -&gt; Fragmento &#39;O&#39; decodificado como &#39;O&#39;. Mensaje: [H][O]</div>
+<div class="line">Trama recibida: [L,L] -&gt; Procesando... -&gt; Fragmento &#39;L&#39; decodificado como &#39;L&#39;. Mensaje: [H][O][L]</div>
+<div class="line"> </div>
+<div class="line">Trama recibida: [M,2] -&gt; Procesando... -&gt; ROTANDO ROTOR +2. (Ahora &#39;A&#39; se mapea a &#39;C&#39;)</div>
+<div class="line"> </div>
+<div class="line">Trama recibida: [L,A] -&gt; Procesando... -&gt; Fragmento &#39;A&#39; decodificado como &#39;C&#39;. Mensaje: [H][O][L][C]</div>
+<div class="line">Trama recibida: [L,Space] -&gt; Procesando... -&gt; Fragmento &#39; &#39; decodificado como &#39; &#39;. Mensaje: [H][O][L][C][ ]</div>
+<div class="line">Trama recibida: [L,W] -&gt; Procesando... -&gt; Fragmento &#39;W&#39; decodificado como &#39;Y&#39;. Mensaje: [H][O][L][C][ ][Y]</div>
+<div class="line"> </div>
+<div class="line">Trama recibida: [M,-2] -&gt; Procesando... -&gt; ROTANDO ROTOR -2. (Ahora &#39;A&#39; se mapea a &#39;A&#39; de nuevo)</div>
+<div class="line"> </div>
+<div class="line">Trama recibida: [L,O] -&gt; Procesando... -&gt; Fragmento &#39;O&#39; decodificado como &#39;O&#39;. Mensaje: [H][O][L][C][ ][Y][O]</div>
+<div class="line">Trama recibida: [L,R] -&gt; Procesando... -&gt; Fragmento &#39;R&#39; decodificado como &#39;R&#39;. Mensaje: [H][O][L][C][ ][Y][O][R]</div>
+<div class="line">Trama recibida: [L,L] -&gt; Procesando... -&gt; Fragmento &#39;L&#39; decodificado como &#39;L&#39;. Mensaje: [H][O][L][C][ ][Y][O][R][L]</div>
+<div class="line">Trama recibida: [L,D] -&gt; Procesando... -&gt; Fragmento &#39;D&#39; decodificado como &#39;D&#39;. Mensaje: [H][O][L][C][ ][Y][O][R][L][D]</div>
+<div class="line"> </div>
+<div class="line">---</div>
+<div class="line">Flujo de datos terminado.</div>
+<div class="line">MENSAJE OCULTO ENSAMBLADO:</div>
+<div class="line">HOLCY YORLD</div>
+<div class="line">---</div>
+<div class="line">Liberando memoria... Sistema apagado.</div>
+</div><!-- fragment --><p></b></p>
+<p><b></p><hr  />
+<p></b></p>
+<p><b></b></p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Temas Adicionales de Investigación Necesarios</h2>
+<p><b></b></p>
+<p><b>Para llevar a cabo esta actividad, el alumno deberá investigar y dominar a fondo:</b></p>
+<p><b></p><ol type="1">
+<li><b>Programación Serial en C++ (El Reto Principal):</b> Cómo abrir, configurar (Baud Rate, Paridad, etc.) y leer desde un puerto COM (ej. <code>\\.\COM3</code> en Windows o <code>/dev/ttyUSB0</code> en Linux) usando <b>solo librerías estándar</b> (como <code>&lt;fstream&gt;</code> o APIs de Win32/POSIX si <code>&lt;fstream&gt;</code> no es suficiente).</li>
+<li><b>Destructores Virtuales:</b> Por qué son <b>absolutamente necesarios</b> en la clase <code><a class="el" href="classTramaBase.html" title="Interface polimórfica para cualquier trama recibida del protocolo PRT-7.">TramaBase</a></code> para evitar fugas de memoria masivas al hacer <code>delete trama;</code> sobre un puntero de la clase base.</li>
+<li><b>Parseo de Cadenas (C-style):</b> Técnicas para dividir una cadena leída del serial (ej. "M,-2") en sus componentes (<code>char*</code>) usando funciones como <code>strtok()</code>, <code>sscanf()</code> o <code>atoi()</code>, ya que <code>std::string</code> y <code>stringstream</code> no están permitidas.</li>
+<li><b>Lógica de Listas Circulares Dobles:</b> La implementación de la rotación eficiente (que no implica mover datos, solo cambiar punteros <code>head</code>, <code>head-&gt;previo</code>, etc.) y la lógica de mapeo relativo.</li>
+</ol>
+<p></b></p>
+<p><b></p><hr  />
+<p></b></p>
+<p><b></b></p>
+<h2><a class="anchor" id="autotoc_md20"></a>
+Entregables</h2>
+<p><b></b></p>
+<p><b></p><ol type="1">
+<li>Código fuente debidamente documentado mediante Doxygen.</li>
+<li>Documentación generada mediante Doxygen.</li>
+<li>Reporte que deberá contener: Introducción Manual técnico (Diseño, desarrllo, componentes)</li>
+<li>Pantallasos de la implementación generada. </li>
+</ol>
+<p></b></p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

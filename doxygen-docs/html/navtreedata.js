@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)", "index.html", [
+    [ "Requisitos - README.md", "index.html", "index" ],
     [ "Clases", "annotated.html", [
       [ "Lista de clases", "annotated.html", "annotated_dup" ],
       [ "Índice de clases", "classes.html", null ],

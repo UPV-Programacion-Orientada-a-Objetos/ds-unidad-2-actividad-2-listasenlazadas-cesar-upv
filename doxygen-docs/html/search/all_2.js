@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultpathfor_0',['defaultPathFor',['../classArduinoParser.html#a08ccee81fde470b3844850934c1dade4',1,'ArduinoParser']]]
+  ['b_20estructuras_20de_20datos_20a_20mano_0',['B. Estructuras de Datos &quot;A Mano&quot;',['../index.html#autotoc_md7',1,'']]]
 ];

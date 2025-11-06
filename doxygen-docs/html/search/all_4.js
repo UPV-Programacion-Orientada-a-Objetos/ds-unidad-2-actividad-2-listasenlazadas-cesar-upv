@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['getbaudrate_0',['getBaudrate',['../classArduinoParser.html#aeda1d1df0be659097a0178fe5706ce6a',1,'ArduinoParser']]],
-  ['getmapeo_1',['getMapeo',['../classRotorDeMapeo.html#a1903dea5383b4dd413c349341b5babbc',1,'RotorDeMapeo']]],
-  ['getpreset_2',['getPreset',['../classArduinoParser.html#ab50709de9e80afdf6e61caa013f86336',1,'ArduinoParser']]]
+  ['datos_20a_20mano_0',['B. Estructuras de Datos &quot;A Mano&quot;',['../index.html#autotoc_md7',1,'']]],
+  ['de_20c_1',['Salida Esperada del Sistema (En la Consola de C++)',['../index.html#autotoc_md16',1,'']]],
+  ['de_20datos_20a_20mano_2',['B. Estructuras de Datos &quot;A Mano&quot;',['../index.html#autotoc_md7',1,'']]],
+  ['de_20entradas_20y_20salidas_20del_20problema_20en_20consola_3',['Ejemplo de Entradas y Salidas del Problema en Consola',['../index.html#autotoc_md14',1,'']]],
+  ['de_20estudio_4',['Definición del Problema a Resolver (El Caso de Estudio)',['../index.html#autotoc_md1',1,'']]],
+  ['de_20estudio_3a_20decodificador_20de_20protocolo_20industrial_20prt_207_5',['Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)',['../index.html#autotoc_md0',1,'']]],
+  ['de_20interacción_20lo_20que_20envía_20el_20arduino_6',['Simulación de Interacción (Lo que envía el Arduino)',['../index.html#autotoc_md15',1,'']]],
+  ['de_20investigación_20necesarios_7',['Temas Adicionales de Investigación Necesarios',['../index.html#autotoc_md18',1,'']]],
+  ['de_20la_20jerarquía_20de_20clases_20poo_8',['A. Diseño de la Jerarquía de Clases (POO)',['../index.html#autotoc_md6',1,'']]],
+  ['de_20solución_20detallado_20la_20lógica_20del_20decodificador_9',['C. Proceso de Solución Detallado (La Lógica del Decodificador)',['../index.html#autotoc_md8',1,'']]],
+  ['decodificador_10',['C. Proceso de Solución Detallado (La Lógica del Decodificador)',['../index.html#autotoc_md8',1,'']]],
+  ['decodificador_20de_20protocolo_20industrial_20prt_207_11',['Caso de Estudio: Decodificador de Protocolo Industrial (PRT-7)',['../index.html#autotoc_md0',1,'']]],
+  ['defaultpathfor_12',['defaultPathFor',['../classArduinoParser.html#a08ccee81fde470b3844850934c1dade4',1,'ArduinoParser']]],
+  ['definición_20del_20problema_20a_20resolver_20el_20caso_20de_20estudio_13',['Definición del Problema a Resolver (El Caso de Estudio)',['../index.html#autotoc_md1',1,'']]],
+  ['definición_20y_20detalles_20del_20proceso_20a_20desarrollar_14',['Definición y Detalles del Proceso a Desarrollar',['../index.html#autotoc_md5',1,'']]],
+  ['del_20decodificador_15',['C. Proceso de Solución Detallado (La Lógica del Decodificador)',['../index.html#autotoc_md8',1,'']]],
+  ['del_20problema_20a_20resolver_20el_20caso_20de_20estudio_16',['Definición del Problema a Resolver (El Caso de Estudio)',['../index.html#autotoc_md1',1,'']]],
+  ['del_20problema_20en_20consola_17',['Ejemplo de Entradas y Salidas del Problema en Consola',['../index.html#autotoc_md14',1,'']]],
+  ['del_20proceso_20a_20desarrollar_18',['Definición y Detalles del Proceso a Desarrollar',['../index.html#autotoc_md5',1,'']]],
+  ['del_20sistema_20en_20la_20consola_20de_20c_19',['Salida Esperada del Sistema (En la Consola de C++)',['../index.html#autotoc_md16',1,'']]],
+  ['desarrollar_20',['Definición y Detalles del Proceso a Desarrollar',['../index.html#autotoc_md5',1,'']]],
+  ['detallado_20la_20lógica_20del_20decodificador_21',['C. Proceso de Solución Detallado (La Lógica del Decodificador)',['../index.html#autotoc_md8',1,'']]],
+  ['detalles_20del_20proceso_20a_20desarrollar_22',['Definición y Detalles del Proceso a Desarrollar',['../index.html#autotoc_md5',1,'']]],
+  ['diseño_20de_20la_20jerarquía_20de_20clases_20poo_23',['A. Diseño de la Jerarquía de Clases (POO)',['../index.html#autotoc_md6',1,'']]]
 ];

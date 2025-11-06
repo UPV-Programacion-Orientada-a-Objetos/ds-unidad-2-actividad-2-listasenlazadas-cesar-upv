@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['obtenercadena_0',['obtenerCadena',['../classAuxiliarCli.html#a2a5050906dc248a4e89aec906e839b76',1,'AuxiliarCli']]],
-  ['obtenerdato_1',['obtenerDato',['../classAuxiliarCli.html#a90cf3f0e4cbf035bf84d9f642097dfae',1,'AuxiliarCli']]],
-  ['onrawline_2',['onRawLine',['../classLineaDispatcher.html#a5783dde94762d452d836b2ae2acc9fc9',1,'LineaDispatcher']]],
-  ['openport_3',['openPort',['../classArduinoParser.html#aba9a7fff625881bf1f618925b3f14c68',1,'ArduinoParser']]]
+  ['getbaudrate_0',['getBaudrate',['../classArduinoParser.html#aeda1d1df0be659097a0178fe5706ce6a',1,'ArduinoParser']]],
+  ['getmapeo_1',['getMapeo',['../classRotorDeMapeo.html#a1903dea5383b4dd413c349341b5babbc',1,'RotorDeMapeo']]],
+  ['getpreset_2',['getPreset',['../classArduinoParser.html#ab50709de9e80afdf6e61caa013f86336',1,'ArduinoParser']]]
 ];
